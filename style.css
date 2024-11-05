@@ -1,0 +1,271 @@
+/* 전체 레이아웃 및 색상 */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #e0e0e0;
+  background: linear-gradient(
+      135deg,
+      rgba(30, 30, 30, 0.9),
+      rgba(50, 50, 50, 0.9)
+    ),
+    url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero 섹션 스타일 */
+.hero {
+  background: linear-gradient(
+    145deg,
+    rgba(60, 60, 60, 0.8),
+    rgba(30, 30, 30, 0.8)
+  );
+  color: #e0e0e0;
+  padding: 100px 20px;
+  text-align: center;
+  backdrop-filter: blur(5px); /* 배경 블러 효과 */
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 약간의 그림자 효과로 입체감 */
+}
+
+/* 프로필 사진 스타일 */
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* 완벽한 원형 */
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.6); /* 고급스러운 테두리 */
+}
+
+/* Social links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #e0e0e0;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffb3c6;
+}
+
+/* 섹션 스타일 */
+section {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(
+    145deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* 섹션 배경 그라데이션 */
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 프로젝트 아이템 스타일 */
+.project-item {
+  background: linear-gradient(
+    135deg,
+    #333,
+    #222
+  ); /* 프로젝트 카드 그라데이션 */
+  color: #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%; /* 카드의 폭을 고정하여 중앙 정렬 */
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-item h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 1em;
+  color: #b0b0b0;
+}
+
+/* 프로젝트 리스트 스타일 */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 프로젝트 간 간격 */
+}
+
+/* 링크 스타일 */
+a {
+  color: #a0c4ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffb3c6;
+}
+
+/* Footer 스타일 */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  background: linear-gradient(
+    135deg,
+    #1a1a1a,
+    #232323
+  ); /* Footer 배경 그라데이션 */
+  font-size: 0.9em;
+}
+
+/* 고급스러운 애니메이션 효과 */
+.fade-in,
+.slide-in {
+  opacity: 0;
+}
+
+/* 어플 아이콘 스타일 */
+.app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 프로젝트 아이템 확장 애니메이션 */
+.project-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.project-summary {
+  cursor: pointer;
+}
+
+/* 프로젝트 상세 내용 (기본 숨김) */
+.project-details {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* 프로젝트 상세 내용 표시될 때 스타일 */
+.project-details[style*="display: block"] {
+  opacity: 1;
+  max-height: 1000px; /* 충분히 큰 값으로 설정 */
+}
+/* 상세 설명이 열릴 때 적용되는 클래스 */
+.project-details.open {
+  max-height: 500px; /* 상세 설명이 열릴 때의 높이 */
+  opacity: 1;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* 프로젝트 영상 스타일 */
+.project-video {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 펼쳐지는 애니메이션 */
+@keyframes expand {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+/* 소개 섹션 스타일 */
+.about {
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+}
+
+.about h2 {
+  color: #a0c4ff;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.skill i {
+  color: #a0c4ff;
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.skill span {
+  color: #e0e0e0;
+  font-size: 1em;
+}
+
+/* 기술 스택 스타일 */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-stack span {
+  background-color: #444;
+  color: #a0c4ff;
+  font-size: 0.85em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dark-Themed Page</title>
+    <!-- FontAwesome 아이콘 사용을 위한 링크 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <!-- 프로필 사진 추가 -->
+      <!-- 토글 버튼 추가 -->
+      <img
+        src="profile.jpg"
+        alt="Profile Picture"
+        class="profile-picture"
+        data-aos="fade-down"
+      />
+      <h1 data-aos="fade-down">Hello!</h1>
+      <p data-aos="fade-up" data-aos-delay="300">Dori.</p>
+      <div class="social-links">
+        <a href="https://x.com/dori_vrc" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/ldoril" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </header>
+
+    <section class="about" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p>
+        Hello! I am a developer with extensive experience in various
+        technologies, spanning both web and mobile platforms. From server
+        deployment to front-end UI/UX implementation, I leverage a diverse tech
+        stack to create high-quality projects.
+      </p>
+      <div class="skills-container">
+        <!-- 기술 리스트 -->
+        <div class="skill">
+          <i class="fas fa-brain"></i>
+          <span>LLM & DeepSeek</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-node"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-js-square"></i>
+          <span>Vanilla JS</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-react"></i>
+          <span>React & React Native</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </div>
+        <div class="skill">
+          <i class="fab fa-aws"></i>
+          <span>AWS Server</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" data-aos="fade-left">
+      <h2>프로젝트</h2>
+      <div class="project-list">
+        <!-- 프로젝트 1 -->
+        <div class="project-item" data-aos="zoom-in" data-aos-delay="200">
+          <img src="app_icon1.png" alt="App Icon 1" class="app-icon" />
+          <h3>Life Note(lna)</h3>
+          <p class="project-summary">
+            An app where you can write a diary and view feedback and emotion
+            charts from AI.
+          </p>
+          <div class="project-details">
+            <div class="tech-stack">
+              <span>AI: DeepSeek</span>
+              <span>Backend: Python</span>
+              <span>Frontend: React Native</span>
+            </div>
+            <video
+              src="project1_demo.mp4"
+              controls
+              class="project-video"
+            ></video>
+          </div>
+        </div>
+
+        <!-- 프로젝트 2 -->
+        <div class="project-item" data-aos="zoom-in" data-aos-delay="400">
+          <img src="app_icon2.png" alt="App Icon 2" class="app-icon" />
+          <h3>MVRC</h3>
+          <p class="project-summary">
+            An app to view and manage VRCHAT friends on mobile.
+          </p>
+          <div class="project-details">
+            <div class="tech-stack">
+              <span>Frontend: React Native</span>
+            </div>
+            <video
+              src="project2_demo.mp4"
+              controls
+              class="project-video"
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>
+        Contact me at:
+        <a href="mailto:your-email@example.com">ybh08266@gmail.com</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2024 My Dark-Themed GitHub Page</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
